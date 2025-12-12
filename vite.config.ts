@@ -1,4 +1,4 @@
-import { fileURLToPath, resolve, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url'
 
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
@@ -13,17 +13,18 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  build: {
-    target: 'esnext',
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-      },
-      output: {
-        dir: resolve(__dirname, 'dist'),
-      },
-    },
-  },
+  // 👇 移除這整個 build 區塊
+  // build: {
+  //   target: 'esnext',
+  //   rollupOptions: {
+  //     input: {
+  //       main: resolve(__dirname, 'index.html'),
+  //     },
+  //     output: {
+  //       dir: resolve(__dirname, 'dist'),
+  //     },
+  //   },
+  // },
   css: {
     preprocessorOptions: {
       scss: {
