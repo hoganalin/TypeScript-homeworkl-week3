@@ -1,3 +1,4 @@
+
 <!--
 ==========================================
 TypeScript 練習題目 - 商品彈窗組件
@@ -30,7 +31,7 @@ import { computed, onMounted, onUnmounted, ref, useTemplateRef, watch } from 'vu
 // 提示：ProductModalProps 應該包含 product 屬性，型別是 ProductData
 interface ProductModalProps {
   // 在這裡定義 props 型別，將 unknown 替換為正確的型別
-  product: unknown
+  product: ProductData
 }
 
 // TODO: 定義 props
